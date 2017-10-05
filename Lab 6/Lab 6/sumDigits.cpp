@@ -4,23 +4,35 @@
 #include <iostream>
 using namespace std;
 
-int main ()
+int sumUpTo(int limit)		//Returns the sum of values of 1 through limit
 {
-  int counter;	// Loop-control variable
-  int sum;		// Running sum
-  int digit;
+	int sum = 0;
+	for (int i = 1; i <= limit; i++) sum += i;
+	return sum;
+}
 
-  cout << "Enter a one-digit number; press return."
-       << endl;
-  cin >> digit;
-  counter =  /* TO BE FILLED IN */                          
-  sum  =     /* TO BE FILLED IN */                          
+void display(int value)
+{
+	cout << "Sum up to " << value << ":" << sumUpTo(value) << endl;
+}
 
-  while /* TO BE FILLED IN  */                                                   
-  {                                                       
-    /*  TO BE FILLED IN */                               
-  }
-  cout << "Sum of digits between 0 and "
-       << digit  << " is "  << sum  << endl;
-  return 0;
+int main()
+{
+	int sum;		// Running sum
+	int digit;
+
+	display(0);
+	display(3);
+	display(7);
+	display(9);
+
+	cout << "Enter a one-digit number; press return."
+		<< endl;
+	cin >> digit;
+
+	sum = sumUpTo(digit);
+
+	cout << "Sum of digits between 0 and "
+		<< digit << " is " << sum << endl;
+	return 0;
 }
