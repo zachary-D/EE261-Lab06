@@ -11,20 +11,10 @@ int sumUpTo(int limit)		//Returns the sum of values of 1 through limit
 	return sum;
 }
 
-void display(int value)
-{
-	cout << "Sum up to " << value << ":" << sumUpTo(value) << endl;
-}
-
 int main()
 {
 	int sum;		// Running sum
 	int digit;
-
-	display(0);
-	display(3);
-	display(7);
-	display(9);
 
 	cout << "Enter a one-digit number; press return."
 		<< endl;
@@ -34,5 +24,8 @@ int main()
 
 	cout << "Sum of digits between 0 and "
 		<< digit << " is " << sum << endl;
+
+	cin.get(); cin.get();
+
 	return 0;
 }
