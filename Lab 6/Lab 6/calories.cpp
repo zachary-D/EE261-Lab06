@@ -12,22 +12,28 @@ int main()
 	int   calories;
 	float fatCalPercent;
 
-	cout << "Enter the name of a food item."
-		<< "  Press return." << endl;
-	getline(cin, foodItem);
+	for (int i = 0; i < 4; i++)
+	{
+		cout << "Enter the name of a food item."
+			<< "  Press return." << endl;
+		getline(cin, foodItem);
 
-	cout << "Enter the grams of fat; press return." << endl;
-	cin >> gramsOfFat;
+		cout << "Enter the grams of fat; press return." << endl;
+		cin >> gramsOfFat;
 
-	cout << "Enter the number of calories; press return."
-		<< endl;
-	cin >> calories;
+		cout << "Enter the number of calories; press return."
+			<< endl;
+		cin >> calories;
 
-	fatCalPercent = ((float)gramsOfFat * 9) / (float)calories * 100;
+		fatCalPercent = ((float)gramsOfFat * 9) / (float)calories * 100;
 
-	cout << "Fat calorie percentage:" << fatCalPercent << "%" << endl;
+		cout << "Fat calorie percentage:" << fatCalPercent << "%" << endl;
 
-	cout << "This item is " << ((fatCalPercent < .3) ? "NOT " : "") << "Heart Healthy!!" << endl;
-	cin.get(); cin.get(); //Hold the window open
+		cout << "This item is " << ((fatCalPercent > .3) ? "NOT " : "") << "Heart Healthy!!" << endl;
+		cin.get();	//Reset cin so that getline can be used at the top of the loop
+	}
+	cin.get(); //Hold the window open
+	cin.get();
+	cin.get();
 	return 0;
 }
