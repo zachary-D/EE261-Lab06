@@ -29,7 +29,7 @@ int main()
 
 		cout << "Fat calorie percentage:" << fatCalPercent << "%" << endl;
 
-		cout << "This item is " << ((fatCalPercent > .3) ? "NOT " : "") << "Heart Healthy!!" << endl;
+		cout << "This item is " << ((fatCalPercent > 30) ? "NOT " : "") << "Heart Healthy!!" << endl;
 		cin.get();	//Reset cin so that getline can be used at the top of the loop
 	}
 	cin.get(); //Hold the window open
